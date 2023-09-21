@@ -3,7 +3,9 @@
     --Gradient1: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     --Gradient2: linear-gradient(315deg, #308383, #399c9b);
     --hFontS: 4rem;
+    --h3fontS: 2rem;
     --pfontS: 2rem;
+    --p2FontS: 1.4rem;
     --hFontFam: 'Croissant One', cursive;
     --pFontFam: 'Kanit', sans-serif;
     --btnFontS: 1.2rem;
@@ -15,7 +17,7 @@
 }
 #mainSection{
     background-image: var(--Gradient1);
-    height: 60.59rem;
+    /* height: 90.59rem; */
     padding: 15rem 0 0 0;
 }
 .headContainer{
@@ -196,4 +198,24 @@ button:hover #clip {
 }
 
 /* Table - BMI for ADults */
+/* BMI for Adults Head and p */
 
+.moreAbtBMI{
+    color: var(--color1);
+    margin: 15rem 0 0 10rem;
+}
+.bmiAdultsHead{
+    font-size: var(--h3fontS);
+    text-decoration: underline;
+    margin-bottom: 2rem;
+}
+.BMIforAdultsP{
+    font-size: var(--p2FontS);
+    margin-bottom: 2rem;
+}
+
+/* Table CSS */
+
+.bmiAdultsTable{
+    border: 2px solid black;
+}
