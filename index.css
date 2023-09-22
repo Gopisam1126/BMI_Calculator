@@ -2,6 +2,10 @@
     --color1: #fff;
     --Gradient1: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     --Gradient2: linear-gradient(315deg, #308383, #399c9b);
+    --Gradient3: linear-gradient(315deg, #129fe6, #15bdff);
+    --Gradient4: linear-gradient(315deg, #1280e6, #1598ff);
+    --Gradient5: linear-gradient(315deg, #9c12e6, #b915ff);
+    --Gradient6: linear-gradient(315deg, #3a3a3a, #444444);
     --hFontS: 4rem;
     --h3fontS: 2rem;
     --pfontS: 2rem;
@@ -9,6 +13,7 @@
     --hFontFam: 'Croissant One', cursive;
     --pFontFam: 'Kanit', sans-serif;
     --btnFontS: 1.2rem;
+    --thColor: #00bf72;
 }
 * {
     margin: 0;
@@ -16,7 +21,7 @@
     box-sizing: border-box;
 }
 #mainSection{
-    background-image: var(--Gradient1);
+    background-image: var(--Gradient6);
     /* height: 90.59rem; */
     padding: 15rem 0 0 0;
 }
@@ -38,149 +43,47 @@
 /* Button Animation */
 
 .btnLink button {
-    position: relative;
-    width: 15rem;
-    height: 6rem;
-    outline: none;
-    transition: 0.1s;
-    background-color: transparent;
-    border: none;
-    font-size: var(--btnFontS);
-    font-weight: bold;
-    color: #ddebf0;
-    margin: 4rem 0 0 55rem;
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
     cursor: pointer;
-    font-family: var(--pfontS);
+    transition: all .3s;
+    margin: 5rem 0 0 55.7rem;
 }
-  
-#clip {
-    --color: #2761c3;
-    position: absolute;
-    top: 0;
-    overflow: hidden;
+button:active,
+button:hover {
+    outline: 0;
+}
+button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
     width: 100%;
     height: 100%;
-    border: 5px double var(--color);
-    box-shadow: inset 0px 0px 15px #195480;
-    -webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
-}  
-.arrow {
-    position: absolute;
-    transition: 0.2s;
-    background-color: #2761c3;
-    top: 35%;
-    width: 11%;
-    height: 30%;
-}  
-#leftArrow {
-    left: -13.5%;
-    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%);
-    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    transition: 300ms;
 }
-#rightArrow {
-    -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%);
-    left: 102%;
-    clip-path: polygon(100% 49%, 0 0, 0 100%);
-    left: 102%;
-}
-button:hover #rightArrow {
-    background-color: #27c39f;
-    left: -15%;
-    animation: 0.6s ease-in-out both infinite alternate rightArrow8;
-}
-  
-button:hover #leftArrow {
-    background-color: #27c39f;
-    left: 103%;
-    animation: 0.6s ease-in-out both infinite alternate leftArrow8;
-}
-.corner {
-    position: absolute;
-    width: 4em;
-    height: 4em;
-    background-color: #2761c3;
-    box-shadow: inset 1px 1px 8px #2781c3;
-    transform: scale(1) rotate(45deg);
-    transition: 0.2s;
-}
-#rightTop {
-    top: -1.98em;
-    left: 91%;
-}
-#leftTop {
-    top: -1.96em;
-    left: -3.0em;
-}
-#leftBottom {
-    top: 2.10em;
-    left: -2.15em;
-}
-#rightBottom {
-    top: 45%;
-    left: 88%;
-}
-button:hover #leftTop {
-    animation: 0.1s ease-in-out 0.05s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-button:hover #rightTop {
-    animation: 0.1s ease-in-out 0.15s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-button:hover #rightBottom {
-    animation: 0.1s ease-in-out 0.25s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-button:hover #leftBottom {
-    animation: 0.1s ease-in-out 0.35s both changeColor8,
-    0.2s linear 0.4s both lightEffect8;
-}
-button:hover .corner {
-    transform: scale(1.25) rotate(45deg);
-}
-button:hover #clip {
-    animation: 0.2s ease-in-out 0.55s both greenLight8;
-    --color: #27c39f;
-}
-@keyframes changeColor8 {
-    from {
-      background-color: #2781c3;
-    }
-    to {
-      background-color: #27c39f;
-    }
-}
-@keyframes lightEffect8 {
-    from {
-      box-shadow: 1px 1px 5px #27c39f;
-    }
-    to {
-      box-shadow: 0 0 2px #27c39f;
-    }
-}
-@keyframes greenLight8 {
-    from {
-    }
-    to {
-      box-shadow: inset 0px 0px 32px #27c39f;
-    }
-}
-@keyframes leftArrow8 {
-    from {
-      transform: translate(0px);
-    }
-    to {
-      transform: translateX(10px);
-    }
-}
-@keyframes rightArrow8 {
-    from {
-      transform: translate(0px);
-    }
-    to {
-      transform: translateX(-10px);
-    }
+button:hover span {
+    background: none;
+} 
+button:active {
+    transform: scale(0.9);
 }
 
 /* Load More Arrow */
@@ -202,20 +105,73 @@ button:hover #clip {
 
 .moreAbtBMI{
     color: var(--color1);
-    margin: 15rem 0 0 10rem;
+    margin: 15rem 15rem 0 10rem;
 }
-.bmiAdultsHead{
+.bmiAdultsHead, .bh{
     font-size: var(--h3fontS);
     text-decoration: underline;
     margin-bottom: 2rem;
+    font-family: var(--hFontFam);
 }
-.BMIforAdultsP{
+.bh {
+    margin-top: 5rem;
+}
+.BMIforAdultsP, .bp{
     font-size: var(--p2FontS);
+    font-family: var(--pFontFam);
     margin-bottom: 2rem;
 }
 
 /* Table CSS */
 
 .bmiAdultsTable{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    line-height: 2;
+    width: 40rem;
+    text-align: center;
+    margin: 5rem 0 0 0rem;
+    font-family: var(--pFontFam);
+    /* box-shadow:  -20px -20px 60px #1190d9, */
+             /* 20px 20px 60px #17ffbe; */
+}
+.tr1H{
+    font-size: var(--p2FontS);
+    background-color: var(--thColor);
+}
+.th2{
+    margin-left: 1.1rem;
+}
+td {
+    font-size: var(--p2FontS);
+}
+.bmiAdultsImgContainer{
+    position: relative;
+}
+.bmiAdultImg{
+    position: absolute;
+    top: -27rem;
+    left: 65rem;
+}
+.bmiTeenImgContainer{
+    position: relative;
+}
+.bmiTeenImgContainer img{
+    height: 40rem;
+}
+.bmiTeenimg1, .bmiTeenimg2{
+    position: absolute;
+    top: -14.6rem;
+    /* left: 42rem; */
+}
+.bmiTeenimg1{
+    left: 42rem;
+}
+.bmiTeenimg2{
+    left: 72rem;
+}
+.bmiRisksContainer{
+    margin: 30rem 0rem 0 0;
+}
+.RisksList{
+    margin: 0 0 0 1.3rem;
 }
