@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="./bmicalc.css">
     <title>BMI Calculator</title>
 </head>
 <body>
-    <section id="section1">
+    <section id="mainSection">
         <div class="formContainer">
-            <form action="" class="dataForm">
-
+            <div class="mhC">
+                <h1 class="mainHead">
+                    BMI Calculator
+                </h1>
+            </div>
+            <form action="" class="dataForm" onsubmit="event.preventDefault();">
+                <label for="age" class="ageLabel">Age</label>
+                <input type="text" class="ageTxtBox" placeholder="ages: 2 - 100" id="aTbox"><br>
+                <label for="male" class="genderRadio">
+                    Gender
+                </label>
+                <input type="radio" name="gender" id="maleRadio">
+                <label for="gender" class="male">Male</label>
+                <input type="radio" name="gender" id="femaleRadio">
+                <label for="gender" class="female">Female</label>
+                <br>
+                <label for="height" class="heightBox">
+                    Height
+                </label>
+                <input type="text" placeholder="cm" class="hTxtBox" id="heightIn"><br>
+                <label for="weight" class="weightBox">
+                    Weight
+                </label>
+                <input type="text" placeholder="Kg" class="wTxtBox" id="weightIn"><br>
+                <button class="btn" onclick="calcBmi()">
+                    Calculate
+                </button>                  
+                <input type="reset" value="Clear" class="btn">
             </form>
         </div>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni ducimus ratione nisi quam repudiandae accusamus maxime unde, et repellat aspernatur aliquam officia? Molestiae minima ratione sequi hic error, soluta quas consequuntur quaerat harum perspiciatis? Suscipit culpa esse facilis nemo illum ducimus natus error laudantium, placeat consequuntur quisquam cupiditate quae rerum labore odio sapiente veniam consectetur saepe sed enim. Soluta at quos, ipsa omnis nesciunt magni quam quisquam laboriosam, enim maxime exercitationem nobis consectetur delectus earum accusantium assumenda consequuntur repellendus? Dolorem, non eos numquam ducimus, omnis maxime consequatur eligendi dignissimos repellendus quasi accusamus porro deleniti commodi quod debitis aliquam rerum cum.</p>
+        <div class="resultContainer">
+            <div class="card">
+                <h2>
+                    RESULT
+                </h2>
+                <p>
+                    Your BMI is :
+                </p>
+                <h3 id="resBMI">
+                    20
+                </h3>
+            </div>
+        </div>
     </section>
 </body>
+<script src="./script.js"></script>
 </html>
