@@ -2,6 +2,7 @@
     --color1: #fff;
     --Gradient1: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
     --Gradient2: linear-gradient(315deg, #308383, #399c9b);
+    --resColor: #00bf72;
     --hFontS: 4rem;
     --pfontS: 2rem;
     --hFontFam: 'Croissant One', cursive;
@@ -109,6 +110,9 @@ input[type='text'] {
     top: 16rem;
     left: 70rem;
 }
+
+/* card */
+
 .card {
     width: 30rem;
     height: 40rem;
@@ -119,25 +123,37 @@ input[type='text'] {
     place-items: center;
     overflow: hidden;
     border-radius: 20px;
-  }
-  
-  .card h2 {
+}
+.card h2 {
     position: absolute;
     top: 2rem;
     z-index: 1;
     color: white;
     /* font-size: 2em; */
-  }
-  .card p{
+}
+.bmiIs{
     position: absolute;
     top: 10rem;
     z-index: 1;
-  }
-  .card h3{
+}
+.card h3{
+    position: absolute;
     z-index: 1;
-  }
-  
-  .card::before {
+    left: 10.5rem;
+    color: var(--resColor);
+}
+.resUnit {
+    z-index: 1;
+    position: absolute;
+    left: 14rem;
+}
+.cBp {
+    position: absolute;
+    z-index: 1;
+    top: 32rem;
+    color: grey;
+}
+.card::before {
     content: '';
     position: absolute;
     width: 100px;
@@ -145,9 +161,8 @@ input[type='text'] {
     height: 130%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
-  }
-  
-  @keyframes rotBGimg {
+}
+@keyframes rotBGimg {
     from {
       transform: rotate(0deg);
     }
@@ -155,13 +170,59 @@ input[type='text'] {
     to {
       transform: rotate(360deg);
     }
-  }
-  
-  .card::after {
+}
+.card::after {
     content: '';
     position: absolute;
     background: #07182E;
     ;
     inset: 5px;
     border-radius: 15px;
+}
+
+/* Back to home Button */
+
+button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: var(--pFontFam);
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    margin: 5rem 0 0 12rem;
+}
+button:focus,
+button:hover {
+    color: #fff;
+}
+button:focus:after,
+button:hover:after {
+    width: 100%;
+    left: 0%;
+}
+button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+.bckToHome a{
+    color: var(--color1);
+    text-decoration: none;
+}
+.cBp a{
+    color: var(--color1);
 }

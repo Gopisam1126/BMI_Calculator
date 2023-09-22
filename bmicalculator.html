@@ -37,7 +37,13 @@
                 <button class="btn" onclick="calcBmi()">
                     Calculate
                 </button>                  
-                <input type="reset" value="Clear" class="btn">
+                <input type="reset" value="Clear" class="btn" onclick="clearAll()"><br>
+                <!-- Back to Home Button -->
+                <button class="bckToHome">
+                    <a href="./index.html">
+                        Back to Home
+                    </a>
+                </button>
             </form>
         </div>
         <div class="resultContainer">
@@ -45,12 +51,19 @@
                 <h2>
                     RESULT
                 </h2>
-                <p>
+                <p class="bmiIs">
                     Your BMI is :
                 </p>
                 <h3 id="resBMI">
                     20
                 </h3>
+                <span class="resUnit" id="unit">
+                    kg/m<sup>2</sup>
+                </span>
+                <p class="bp cBp">
+                    Please refer the <a href="./index.html">documentation </a><br>
+                    to know about the BMI Ranges
+                </p>
             </div>
         </div>
     </section>
